@@ -4,7 +4,97 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yongjoon Kweon - Project Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2c3e50;
+            --text-color: #333;
+            --background-color: #f4f4f4;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        nav ul {
+            padding: 0;
+            list-style-type: none;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        section {
+            background-color: white;
+            margin-bottom: 30px;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        h1, h2, h3 {
+            color: var(--secondary-color);
+        }
+
+        .project, .experience {
+            margin-bottom: 20px;
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: var(--secondary-color);
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .profile-photo {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 20px auto;
+            display: block;
+            border: 3px solid var(--primary-color);
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -12,7 +102,7 @@
         <nav>
             <ul>
                 <li><a href="#about">About</a></li>
-                <li><a href="#Experience">Experience</a></li>
+                <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -20,183 +110,113 @@
     </header>
 
     <main>
+        <img src="/Users/matthewkweon/Downloads/interview_cover_letter/IMG_4772.HEIC" alt="Yongjoon Kweon" class="profile-photo">
+        
         <section id="about">
             <h2>About Me</h2>
-            <p>Hi! My name is Yongjoon Kweon, but I go by Matthew. I am a rising junior studying Computer Engineering
-                at Boston University. I am interested in machine learning, software engineering, and data science. I am proficient 
-                in Python, Java, and C++. I am also familiar with machine learning libraries such as TensorFlow and Sci-kit Learning.
-                I am also proficient in web development languages such as HTML, CSS, and JavaScript.
-            </p>
-            <p>
-                I am a quick learner and I am always eager to learn new things. I am a hard worker and I am always willing to go the 
-                extra mile to get the job done. I'm super excited to learn more things in the future and truly believe that as long
-                as I am consistent and productive, I can achieve anything I set my mind to, and I hope to share that curiosity to the world.
-            </p>
-            <p>
-                "Coding is a lifelong journey"
-            </p>
+            <p>Hi! My name is Yongjoon Kweon, but I go by Matthew. I am a rising junior studying Computer Engineering at Boston University. I am interested in machine learning, software engineering, and data science. I am proficient in Python, Java, and C++. I am also familiar with machine learning libraries such as TensorFlow and Sci-kit Learning. I am also proficient in web development languages such as HTML, CSS, and JavaScript.</p>
+            <p>I am a quick learner and I am always eager to learn new things. I am a hard worker and I am always willing to go the extra mile to get the job done. I'm super excited to learn more things in the future and truly believe that as long as I am consistent and productive, I can achieve anything I set my mind to, and I hope to share that curiosity with the world.</p>
+            <blockquote>"Coding is a lifelong journey"</blockquote>
         </section>
-        <section id="Experience">
+
+        <section id="experience">
             <h2>Experience</h2>
             <div class="experience">
                 <h3>Hairolet LLC Start-up</h3>
-                <p>Website link: <a href="https://www.coding4all.online/">website</a></p>
-                <p>
-                    This is a start-up company that my friend, Saba Fajors, harvard undergraduate, and I have started in hopes to expand the coding outreach and 
-                    make it more accessible for everyone. We have started an initiative to teach coding to underprivileged students around
-                    the U.S. We have made the website free to use and accessible to anyone with a computer and internet connection. We have
-                    co-developed python courses and are in the process of creating a similar C++ course, which I have taking the lead in.
-                </p>
-                <p>
-                    As of June 12, we are currently in the midst of a rebuilding and rebranding. We want to make the website more user-friendly and 
-                    target a younger generation of coders. We feel that there is a huge market for younger audiences to learn how to code as software 
-                    engineering continues to grow. Wish us luck on our rebranding as we have brought on multiple new members to help us market our 
-                    website. 
-                </p>
-                <p>
-                    During my time at Hairolet LLC, I led web development efforts using HTML within Squarespace, managing and maintaining the startup’s 
-                    website to ensure a user-friendly and visually appealing online presence. This role involved overseeing over 30 engagements per 
-                    month, demonstrating my ability to handle high-traffic web environments effectively. Additionally, I co-developed and provided a 
-                    free comprehensive Python course, engaging over 60 students with quizzes, practice projects, and in-depth content to enhance their 
-                    programming skills. My contributions extended to leading the development of a new C++ course, showcasing my expertise in diverse 
-                    programming languages. Furthermore, I assisted in creating a paid version of the course, featuring advanced content and additional 
-                    resources, to offer a more in-depth learning experience for students seeking advanced knowledge and skills. This experience at 
-                    Hairolet LLC allowed me to blend technical proficiency with educational content creation, significantly contributing to the company’s 
-                    mission of providing accessible and high-quality programming education.
-                </p>
+                <p>Website: <a href="https://www.coding4all.online/" target="_blank">coding4all.online</a></p>
+                <p>This is a start-up company that my friend, Saba Fajors, a Harvard undergraduate, and I have started in hopes to expand coding outreach and make it more accessible for everyone. We have started an initiative to teach coding to underprivileged students around the U.S. We have made the website free to use and accessible to anyone with a computer and internet connection.</p>
+                <p>As of June 12, we are currently in the midst of a rebuilding and rebranding. We want to make the website more user-friendly and target a younger generation of coders. We feel that there is a huge market for younger audiences to learn how to code as software engineering continues to grow.</p>
+                <p>During my time at Hairolet LLC, I:</p>
+                <ul>
+                    <li>Led web development efforts using HTML within Squarespace</li>
+                    <li>Managed over 30 engagements per month</li>
+                    <li>Co-developed a free comprehensive Python course, engaging over 60 students</li>
+                    <li>Led the development of a new C++ course</li>
+                    <li>Assisted in creating a paid version of the course with advanced content</li>
+                </ul>
             </div>
-
-        
-
-
         </section>
+
         <section id="projects">
             <h2>My Projects</h2>
             <div class="project">
                 <h3>Gym Classification</h3>
-                <p>Github link: <a href="https://github.com/Matthewkweon/Gym-classifier">Github</a></p>
-                <p>Program link: <a href="https://matthewkweon.github.io/Gym-classifier/">website</a></p>
-                <p>This is a personal passion project that stems from my passion in Machine Learning, Web Development, API usage and the Gym.</p>
-                <p>This project is targetted at users who are more unfamiliar with the gym, and to make the gym experience a more 
-                    inclusive space, I create a program where users can input an image of any gym equipment and the program will 
-                    output a short discription of the machine, how to use it, and also link a suitable youtube tutorial video they
-                    can watch. This is designed to be easy, simple, and user friendly for all users in order to make the gym space
-                    a more judgement-free zone, as everyone knows how intimidating the gym can be for beginners.
-                </p>
+                <p>Github: <a href="https://github.com/Matthewkweon/Gym-classifier" target="_blank">Gym-classifier</a></p>
+                <p>Program: <a href="https://matthewkweon.github.io/Gym-classifier/" target="_blank">Gym Classifier Website</a></p>
+                <p>This project combines my passion for Machine Learning, Web Development, API usage, and the Gym. It's designed to make the gym experience more inclusive by helping users identify and learn about unfamiliar gym equipment.</p>
                 <p>
-                    I developed a full-stack web application using Python and JavaScript to classify gym equipment from images, 
-                    leveraging OpenAI's GPT-4 Vision API. The application is web-based and phone-accessible, allowing users to 
-                    upload images of unfamiliar gym machines for instant identification. This feature is particularly designed 
-                    to assist older gym-goers and newcomers in navigating and effectively using gym equipment by providing usage 
-                    instructions and linked tutorial videos. Throughout the project, I integrated multiple APIs, including OpenAI 
-                    and YouTube, and implemented image processing techniques using Pillow, demonstrating my practical machine learning 
-                    and computer vision skills. Additionally, I deployed and managed a production-ready application on Heroku, 
-                    incorporating error handling, logging, and security practices such as CORS management. This project enhanced my 
-                    understanding of full-stack development, API integration, and deployment strategies, while also honing my skills in 
-                    machine learning, computer vision, and creating user-friendly interfaces.
+                    I am currently in the works of expanding this outreach and after further algorithm optimization, I plan to deploy this at my local gym and paste a QR code that will allow users to access this program. Wish me luck!
                 </p>
-                <p>
-                    I am currently in the works of expanding this outreach and after further algorithm optimization, I plan to deploy this
-                    at my local gym and paste a QR code that will allow users to access this program. Wish me luck!
-                </p>
+                <p>Key features:</p>
+                <ul>
+                    <li>Full-stack web application using Python and JavaScript</li>
+                    <li>Leverages OpenAI's GPT-4 Vision API for image classification</li>
+                    <li>Integrates YouTube API for tutorial videos</li>
+                    <li>Deployed on Heroku with error handling and security practices</li>
+                </ul>
             </div>
+
             <div class="project">
                 <h3>Productivity Program</h3>
-                <p>Github link: <a href="https://github.com/Matthewkweon/productivity-tracker">Github</a></p>
-                <p>This is a personal  project stemming from my passion in productivity videos and books. Throughout my college life,
-                    I have been engrossed in the world of productivity and self-improvement, and I have always wanted to create a program
-                    that would help me focus when deep work was needed. This project was meant to help myself focus, but also can be used 
-                    by others with basic knowledge of python, javascript and web-development. I am currently working on making this program 
-                    into a desktop application, so that it has more control over the user's computer and can be used more effectively.
-                </p>
-                <p>
-                    I developed a productivity tracker utilizing HTML/CSS, Python, and JavaScript, featuring a Pomodoro timer and goal-setting 
-                    functionalities aimed at helping users with productivity issues. The application includes real-time activity monitoring 
-                    implemented using Flask and is deployed on the Heroku infrastructure, ensuring seamless, real-time, and accessible productivity 
-                    tracking. I collaborated with Pushover APIs and experimented with Twilio for notifications, integrating a responsive design that 
-                    enhances user interaction and engagement. Through this project, I learned to effectively combine front-end and back-end technologies 
-                    to create a cohesive and user-friendly application, while also gaining experience in deploying and managing applications on cloud 
-                    platforms. The use of Pushover requires users to have the app installed for notifications, adding an extra layer of real-time 
-                    communication to the productivity tracker.
-                </p>
-
+                <p>Github: <a href="https://github.com/Matthewkweon/productivity-tracker" target="_blank">productivity-tracker</a></p>
+                <p>This personal project stems from my passion for productivity and self-improvement. It's designed to help users focus during deep work sessions.</p>
+                <p>Key features:</p>
+                <ul>
+                    <li>Developed using HTML/CSS, Python, and JavaScript</li>
+                    <li>Includes a Pomodoro timer and goal-setting functionalities</li>
+                    <li>Real-time activity monitoring using Flask</li>
+                    <li>Deployed on Heroku for accessibility</li>
+                    <li>Integrates Pushover APIs for notifications</li>
+                </ul>
             </div>
-            <!-- Add more project divs as needed -->
+
             <div class="project">
                 <h3>Jumpknight: Android Studios App Development</h3>
-                <p>Github link: <a href="https://github.com/rps9/EC_327_Project">Github</a></p>
-                <p>Youtube link: <a href="https://www.youtube.com/watch?v=l7J28aPJbHc">Github</a></p>
-                <p>
-                    JumpKnight is an engaging and challenging platform jumper game where players take on the role of a knight striving to reach the 
-                    highest platform. Users control the knight's jumps using intuitive tilt-based controls and screen press duration, which dictate 
-                    the direction and height of each jump. The game starts with a simple instruction screen that guides players on how to play. Once 
-                    in the game, players must strategically time and aim their jumps to ascend from platform to platform. The game’s physics engine 
-                    adds a layer of complexity, making each jump feel realistic and requiring precision. If a player misses a platform, they might 
-                    fall to a lower level or even to the beginning, adding a thrilling element of risk and reward. Fun interactions include the 
-                    ability to see the knight’s animated movements and the dynamic background that changes as the player progresses. Reaching the 
-                    top platform and touching the flag triggers a celebratory end screen, providing a sense of accomplishment. JumpKnight’s blend of 
-                    strategic gameplay, intuitive controls, and rewarding challenges creates an addictive and enjoyable gaming experience.
-                </p>
-                <p>
-                    I collaborated with four other engineers on a comprehensive full-stack Android game project, JumpKnight, utilizing Android Studio, C++, Git, and Java. 
-                    My primary focus was spearheading the UI/UX and front-end development to enhance the user experience for over 150 users. 
-                    I designed and implemented the start and end screens, provided users with clear instructions, and ensured smooth page transitions 
-                    between different game screens, contributing to an intuitive and engaging user interface. In addition to UI/UX design, I 
-                    co-developed the app's front end by implementing features such as tilt-based controls and touch-jump mechanics, which 
-                    significantly enhanced gameplay by allowing users to control the knight’s jumps through device orientation and screen press 
-                    duration. I led the testing efforts, conducting extensive debugging to identify and resolve critical bugs such as issues with 
-                    platform clipping and terminal velocity. This process involved iterative testing and optimization to improve game stability 
-                    and performance across various Android devices. By coordinating closely with team members, I integrated key game components, 
-                    including collision detection, physics calculations, and level design, ensuring a cohesive and functional final product. 
-                    My contributions were essential in delivering a polished and enjoyable gaming experience for all users.
-                </p>
+                <p>Github: <a href="https://github.com/rps9/EC_327_Project" target="_blank">EC_327_Project</a></p>
+                <p>Youtube: <a href="https://www.youtube.com/watch?v=l7J28aPJbHc" target="_blank">JumpKnight Demo</a></p>
+                <p>JumpKnight is an engaging platform jumper game developed for Android, where players control a knight trying to reach the highest platform.</p>
+                <p>My contributions:</p>
+                <ul>
+                    <li>Led UI/UX and front-end development</li>
+                    <li>Implemented tilt-based controls and touch-jump mechanics</li>
+                    <li>Conducted extensive debugging and testing</li>
+                    <li>Integrated key game components including collision detection and physics calculations</li>
+                </ul>
             </div>
+
             <div class="project">
                 <h3>Smart Blue Light Desk Lamp</h3>
-                <p>Project link: <a href="https://docs.google.com/document/d/1VIwnP704WDxwkJ0tRHhSRb0U3lKi0Sj6VFabdNUrzAU/edit?usp=drive_link&usp=embed_facebook">Documentation</a></p>
-                <p>Video link: <a href="https://drive.google.com/file/d/11202GH0v1Twfa7qJm1SeMh-m5PRTtSUe/view?usp=sharing">Video</a></p>
-                <p>
-                    I collaborated with a team of four engineers to design and develop a smart desk lamp that is meant for users with limited
-                    dexterity. The lamp is meant to be desgined and controlled by voice and limited hand movements (i.e. no switches). The lamp
-                    can be controlled by voice, by button, and also changes color based on the ambient light. This lamp involved both software and
-                    hardware development, and I was in charge of the software development. 
-                </p>
-                In my Smart Blue Desk Lamp project, I honed my skills in embedded systems and C++ programming by developing a sophisticated Arduino 
-                Uno-based solution tailored for users with limited dexterity. I integrated advanced features such as voice control and light sensor 
-                adjustments to ensure optimal lighting conditions, maintaining lumens below 6500 for user comfort. Leading the integration and testing 
-                phases, I successfully implemented a light sensor that reduced blue light output by 99% and achieved precise automatic lamp brightness 
-                adjustments based on ambient light levels, all while preserving the relative white color of the light. This project enhanced my abilities 
-                in sensor integration, user-centric design, and adaptive lighting solutions.
-                <p>
-
-                </p>
-            </div>
-            <div class = "project">
-                <h3> Machine Learning Classification Project Analyzing Global Crime Rates</h3>
-                <p>Project Documentation: <a href="https://drive.google.com/file/d/1JvBRzfXYV7YW1E6BNxe7EjebDs42-hBM/view?usp=drive_link">Documentation</a></p>
-                <p>
-                    I used Matlab, data cleaning and analysis skills, and Machine Learning algorithms to analyze correlations between crime, drug usage, and 
-                    unemployment rates. I collaborated with 2 other engineers to create a comprehensive report that found significant correlation between the 
-                    three. This project sparked the beginning of my interest in machine learning and data analysis, as well as improve my software engineering 
-                    skills with Matlab. 
-                </p>
-                <p>
-                    In my work analyzing over 200,000 data points of global crime rates from 20 countries, I developed strong machine learning skills, 
-                    particularly in unsupervised learning algorithms. Using Matlab Classification Learner, I identified trends and correlations between crime rates, 
-                    drug fatalities, and unemployment rates. I significantly enhanced the data's reliability by creating and implementing data cleaning and scrubbing 
-                    algorithms, resulting in a 30% reduction in data inconsistencies. Additionally, I applied machine learning models to gain insights and visualized 
-                    year-on-year crime rate changes through scatter plots, demonstrating my ability to handle large datasets and derive meaningful patterns and trends 
-                    from complex data.
-                </p>
+                <p>Documentation: <a href="https://docs.google.com/document/d/1VIwnP704WDxwkJ0tRHhSRb0U3lKi0Sj6VFabdNUrzAU/edit?usp=drive_link&usp=embed_facebook" target="_blank">Project Documentation</a></p>
+                <p>Video: <a href="https://drive.google.com/file/d/11202GH0v1Twfa7qJm1SeMh-m5PRTtSUe/view?usp=sharing" target="_blank">Demo Video</a></p>
+                <p>This project involved developing a smart desk lamp designed for users with limited dexterity, controllable by voice and limited hand movements.</p>
+                <p>Key achievements:</p>
+                <ul>
+                    <li>Developed using Arduino Uno and C++</li>
+                    <li>Implemented voice control and light sensor adjustments</li>
+                    <li>Reduced blue light output by 99%</li>
+                    <li>Achieved precise automatic lamp brightness adjustments based on ambient light</li>
+                </ul>
             </div>
 
+            <div class="project">
+                <h3>Machine Learning Classification Project Analyzing Global Crime Rates</h3>
+                <p>Documentation: <a href="https://drive.google.com/file/d/1JvBRzfXYV7YW1E6BNxe7EjebDs42-hBM/view?usp=drive_link" target="_blank">Project Documentation</a></p>
+                <p>This project analyzed correlations between crime, drug usage, and unemployment rates using machine learning techniques.</p>
+                <p>Key aspects:</p>
+                <ul>
+                    <li>Analyzed over 200,000 data points from 20 countries</li>
+                    <li>Used Matlab Classification Learner for trend identification</li>
+                    <li>Implemented data cleaning algorithms, reducing inconsistencies by 30%</li>
+                    <li>Created visualizations of year-on-year crime rate changes</li>
+                </ul>
+            </div>
         </section>
 
         <section id="contact">
             <h2>Contact Me</h2>
-            <p>Email: kweon10@bu.edu</p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/yongjoon-kweon-697945269/">LinkedIn</a></p>
-            <p>GitHub: <a href="https://github.com/Matthewkweon">GitHub</a></p>
+            <p>Email: <a href="mailto:kweon10@bu.edu">kweon10@bu.edu</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/yongjoon-kweon-697945269/" target="_blank">Yongjoon Kweon</a></p>
+            <p>GitHub: <a href="https://github.com/Matthewkweon" target="_blank">Matthewkweon</a></p>
         </section>
     </main>
 
