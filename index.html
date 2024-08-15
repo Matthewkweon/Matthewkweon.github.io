@@ -62,7 +62,13 @@
             color: var(--secondary-color);
         }
 
-        .project, .experience {
+        .project {
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .experience {
             margin-bottom: 20px;
         }
 
@@ -94,6 +100,27 @@
             display: block;
             border: 3px solid var(--primary-color);
         }
+
+        .resume-section {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .resume-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .resume-button:hover {
+            background-color: #2980b9;
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
@@ -104,14 +131,20 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#resume">Resume</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <img src="/Users/matthewkweon/Downloads/interview_cover_letter/IMG_4772.HEIC" alt="Yongjoon Kweon" class="profile-photo">
+        <img src="path/to/your/image.jpg" alt="Yongjoon Kweon" class="profile-photo">
         
+        <section id="resume" class="resume-section">
+            <h2>My Resume</h2>
+            <a href="path/to/your/resume.pdf" target="_blank" class="resume-button">View Resume</a>
+        </section>
+
         <section id="about">
             <h2>About Me</h2>
             <p>Hi! My name is Yongjoon Kweon, but I go by Matthew. I am a rising junior studying Computer Engineering at Boston University. I am interested in machine learning, software engineering, and data science. I am proficient in Python, Java, and C++. I am also familiar with machine learning libraries such as TensorFlow and Sci-kit Learning. I am also proficient in web development languages such as HTML, CSS, and JavaScript.</p>
@@ -169,7 +202,7 @@
                     <li>Integrates Pushover APIs for notifications</li>
                 </ul>
             </div>
-
+           
             <div class="project">
                 <h3>Jumpknight: Android Studios App Development</h3>
                 <p>Github: <a href="https://github.com/rps9/EC_327_Project" target="_blank">EC_327_Project</a></p>
