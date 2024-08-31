@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yongjoon Kweon - Project Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
     <style>
         :root {
             --primary-color: #3498db;
@@ -88,14 +90,6 @@
             margin-bottom: 40px;
             padding-bottom: 20px;
             border-bottom: 1px solid #eee;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.5s ease, transform 0.5s ease;
-        }
-
-        .project.reveal {
-            opacity: 1;
-            transform: translateY(0);
         }
 
         .experience {
@@ -120,17 +114,7 @@
             bottom: 0;
             width: 100%;
         }
-/*
-        .profile-photo {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin: 20px auto;
-            display: block;
-            border: 3px solid var(--primary-color);
-        }
-*/
+
         .resume-section {
             text-align: center;
             margin: 20px 0;
@@ -151,6 +135,19 @@
             background-color: #2980b9;
             text-decoration: none;
         }
+
+        .project-carousel {
+            margin-bottom: 30px;
+        }
+        .slick-prev, .slick-next {
+            z-index: 1;
+        }
+        .slick-prev {
+            left: 10px;
+        }
+        .slick-next {
+            right: 10px;
+        }
     </style>
 </head>
 <body>
@@ -169,132 +166,57 @@
 
     <main>
         <section id="resume" class="resume-section">
-            <h2>My Resume</h2>
-            <a href="files/Yongjoon-Kweon-Resume-copy.pdf" target="_blank" class="resume-button">View Resume</a>
+            <h2 class="section-header">My Resume</h2>
+            <div class="section-content">
+                <a href="files/Yongjoon-Kweon-Resume-copy.pdf" target="_blank" class="resume-button">View Resume</a>
+            </div>
         </section>
 
         <section id="about">
             <h2 class="section-header">About Me</h2>
             <div class="section-content">
-            <p>Hi! My name is Yongjoon Kweon, but I go by Matthew. I am a rising junior studying Computer Engineering at Boston University. I am interested in machine learning, software engineering, and data science. I am proficient in Python, Java, and C++. I am also familiar with machine learning libraries such as TensorFlow and Sci-kit Learning. I am also proficient in web development languages such as HTML, CSS, and JavaScript.</p>
-            <p>I am a quick learner and I am always eager to learn new things. I am a hard worker and I am always willing to go the extra mile to get the job done. I'm super excited to learn more things in the future and truly believe that as long as I am consistent and productive, I can achieve anything I set my mind to, and I hope to share that curiosity with the world.</p>
-            <blockquote>"Coding is a lifelong journey"</blockquote>
+                <p>Hi! My name is Yongjoon Kweon, but I go by Matthew. I am a rising junior studying Computer Engineering at Boston University. I am interested in machine learning, software engineering, and data science. I am proficient in Python, Java, and C++. I am also familiar with machine learning libraries such as TensorFlow and Sci-kit Learning. I am also proficient in web development languages such as HTML, CSS, and JavaScript.</p>
+                <p>I am a quick learner and I am always eager to learn new things. I am a hard worker and I am always willing to go the extra mile to get the job done. I'm super excited to learn more things in the future and truly believe that as long as I am consistent and productive, I can achieve anything I set my mind to, and I hope to share that curiosity with the world.</p>
+                <blockquote>"Coding is a lifelong journey"</blockquote>
+            </div>
         </section>
 
         <section id="experience">
             <h2 class="section-header">Experience</h2>
             <div class="section-content">
                 <div class="experience">
-                <h3>Hairolet LLC Start-up</h3>
-                <p>Website: <a href="https://www.coding4all.online/" target="_blank">coding4all.online</a></p>
-                <p>This is a start-up company that my friend, Saba Fajors, a Harvard undergraduate, and I have started in hopes to expand coding outreach and make it more accessible for everyone. We have started an initiative to teach coding to underprivileged students around the U.S. We have made the website free to use and accessible to anyone with a computer and internet connection.</p>
-                <p>As of June 12, we are currently in the midst of a rebuilding and rebranding. We want to make the website more user-friendly and target a younger generation of coders. We feel that there is a huge market for younger audiences to learn how to code as software engineering continues to grow.</p>
-                <p>During my time at Hairolet LLC, I:</p>
-                <ul>
-                    <li>Led web development efforts using HTML within Squarespace</li>
-                    <li>Managed over 30 engagements per month</li>
-                    <li>Co-developed a free comprehensive Python course, engaging over 60 students</li>
-                    <li>Led the development of a new C++ course</li>
-                    <li>Assisted in creating a paid version of the course with advanced content</li>
-                </ul>
+                    <h3>Hairolet LLC Start-up</h3>
+                    <p>Website: <a href="https://www.coding4all.online/" target="_blank">coding4all.online</a></p>
+                    <p>This is a start-up company that my friend, Saba Fajors, a Harvard undergraduate, and I have started in hopes to expand coding outreach and make it more accessible for everyone. We have started an initiative to teach coding to underprivileged students around the U.S. We have made the website free to use and accessible to anyone with a computer and internet connection.</p>
+                    <p>As of June 12, we are currently in the midst of a rebuilding and rebranding. We want to make the website more user-friendly and target a younger generation of coders. We feel that there is a huge market for younger audiences to learn how to code as software engineering continues to grow.</p>
+                    <p>During my time at Hairolet LLC, I:</p>
+                    <ul>
+                        <li>Led web development efforts using HTML within Squarespace</li>
+                        <li>Managed over 30 engagements per month</li>
+                        <li>Co-developed a free comprehensive Python course, engaging over 60 students</li>
+                        <li>Led the development of a new C++ course</li>
+                        <li>Assisted in creating a paid version of the course with advanced content</li>
+                    </ul>
+                </div>
             </div>
         </section>
 
         <section id="projects">
             <h2 class="section-header">My Projects</h2>
             <div class="section-content">
-                <div class="project">
-                <h3>Gym Classification</h3>
-                <p>Github: <a href="https://github.com/Matthewkweon/Gym-classifier" target="_blank">Gym-classifier</a></p>
-                <p>Program: <a href="https://matthewkweon.github.io/Gym-classifier/" target="_blank">Gym Classifier Website</a></p>
-                <p>This project combines my passion for Machine Learning, Web Development, API usage, and the Gym. It's designed to make the gym experience more inclusive by helping users identify and learn about unfamiliar gym equipment.</p>
-                <p>
-                    I am currently in the works of expanding this outreach and after further algorithm optimization, I plan to deploy this at my local gym and paste a QR code that will allow users to access this program. Wish me luck!
-                </p>
-                <p>Key features:</p>
-                <ul>
-                    <li>Full-stack web application using Python and JavaScript</li>
-                    <li>Leverages OpenAI's GPT-4 Vision API for image classification</li>
-                    <li>Integrates YouTube API for tutorial videos</li>
-                    <li>Deployed on Heroku with error handling and security practices</li>
-                </ul>
-            </div>
-
-            <div class="project">
-                <h2 class="section-header">My Projects</h2>
-                <div class="section-content">
-                <div class="project">
-                <h3>Productivity Program</h3>
-                <p>Github: <a href="https://github.com/Matthewkweon/productivity-tracker" target="_blank">productivity-tracker</a></p>
-                <p>This personal project stems from my passion for productivity and self-improvement. It's designed to help users focus during deep work sessions.</p>
-                <p>Key features:</p>
-                <ul>
-                    <li>Developed using HTML/CSS, Python, and JavaScript</li>
-                    <li>Includes a Pomodoro timer and goal-setting functionalities</li>
-                    <li>Real-time activity monitoring using Flask</li>
-                    <li>Deployed on Heroku for accessibility</li>
-                    <li>Integrates Pushover APIs for notifications</li>
-                </ul>
-            </div>
-           
-            <div class="project">
-                <h2 class="section-header">My Projects</h2>
-                <div class="section-content">
-                <div class="project">
-                <h3>Jumpknight: Android Studios App Development</h3>
-                <p>Github: <a href="https://github.com/rps9/EC_327_Project" target="_blank">EC_327_Project</a></p>
-                <p>Youtube: <a href="https://www.youtube.com/watch?v=l7J28aPJbHc" target="_blank">JumpKnight Demo</a></p>
-                <p>JumpKnight is an engaging platform jumper game developed for Android, where players control a knight trying to reach the highest platform.</p>
-                <p>My contributions:</p>
-                <ul>
-                    <li>Led UI/UX and front-end development</li>
-                    <li>Implemented tilt-based controls and touch-jump mechanics</li>
-                    <li>Conducted extensive debugging and testing</li>
-                    <li>Integrated key game components including collision detection and physics calculations</li>
-                </ul>
-            </div>
-
-            <div class="project">
-                <h2 class="section-header">My Projects</h2>
-                <div class="section-content">
-                <div class="project">
-                <h3>Smart Blue Light Desk Lamp</h3>
-                <p>Documentation: <a href="https://docs.google.com/document/d/1VIwnP704WDxwkJ0tRHhSRb0U3lKi0Sj6VFabdNUrzAU/edit?usp=drive_link&usp=embed_facebook" target="_blank">Project Documentation</a></p>
-                <p>Video: <a href="https://drive.google.com/file/d/11202GH0v1Twfa7qJm1SeMh-m5PRTtSUe/view?usp=sharing" target="_blank">Demo Video</a></p>
-                <p>This project involved developing a smart desk lamp designed for users with limited dexterity, controllable by voice and limited hand movements.</p>
-                <p>Key achievements:</p>
-                <ul>
-                    <li>Developed using Arduino Uno and C++</li>
-                    <li>Implemented voice control and light sensor adjustments</li>
-                    <li>Reduced blue light output by 99%</li>
-                    <li>Achieved precise automatic lamp brightness adjustments based on ambient light</li>
-                </ul>
-            </div>
-
-            <div class="project">
-                <h2 class="section-header">My Projects</h2>
-                <div class="section-content">
-                <div class="project">
-                <h3>Machine Learning Classification Project Analyzing Global Crime Rates</h3>
-                <p>Documentation: <a href="https://drive.google.com/file/d/1JvBRzfXYV7YW1E6BNxe7EjebDs42-hBM/view?usp=drive_link" target="_blank">Project Documentation</a></p>
-                <p>This project analyzed correlations between crime, drug usage, and unemployment rates using machine learning techniques.</p>
-                <p>Key aspects:</p>
-                <ul>
-                    <li>Analyzed over 200,000 data points from 20 countries</li>
-                    <li>Used Matlab Classification Learner for trend identification</li>
-                    <li>Implemented data cleaning algorithms, reducing inconsistencies by 30%</li>
-                    <li>Created visualizations of year-on-year crime rate changes</li>
-                </ul>
+                <div class="project-carousel">
+                    <!-- The carousel content will be dynamically populated by JavaScript -->
+                </div>
             </div>
         </section>
 
         <section id="contact">
             <h2 class="section-header">Contact Me</h2>
             <div class="section-content">
-            <h2>Contact Me</h2>
-            <p>Email: <a href="mailto:kweon10@bu.edu">kweon10@bu.edu</a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/yongjoon-kweon-697945269/" target="_blank">Yongjoon Kweon</a></p>
-            <p>GitHub: <a href="https://github.com/Matthewkweon" target="_blank">Matthewkweon</a></p>
+                <p>Email: <a href="mailto:kweon10@bu.edu">kweon10@bu.edu</a></p>
+                <p>LinkedIn: <a href="https://www.linkedin.com/in/yongjoon-kweon-697945269/" target="_blank">Yongjoon Kweon</a></p>
+                <p>GitHub: <a href="https://github.com/Matthewkweon" target="_blank">Matthewkweon</a></p>
+            </div>
         </section>
     </main>
 
@@ -302,7 +224,8 @@
         <p>&copy; 2024 Yongjoon Kweon. All rights reserved.</p>
     </footer>
 
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script>
         function revealElements() {
             var windowHeight = window.innerHeight;
@@ -329,12 +252,115 @@
             }
         }
 
+        const projectsData = [
+            {
+                title: "Gym Classification",
+                description: "This project combines my passion for Machine Learning, Web Development, API usage, and the Gym. It's designed to make the gym experience more inclusive by helping users identify and learn about unfamiliar gym equipment.",
+                links: [
+                    { text: "Github", url: "https://github.com/Matthewkweon/Gym-classifier" },
+                    { text: "Website", url: "https://matthewkweon.github.io/Gym-classifier/" }
+                ],
+                features: [
+                    "Full-stack web application using Python and JavaScript",
+                    "Leverages OpenAI's GPT-4 Vision API for image classification",
+                    "Integrates YouTube API for tutorial videos",
+                    "Deployed on Heroku with error handling and security practices"
+                ]
+            },
+            {
+                title: "Productivity Program",
+                description: "This personal project stems from my passion for productivity and self-improvement. It's designed to help users focus during deep work sessions.",
+                links: [
+                    { text: "Github", url: "https://github.com/Matthewkweon/productivity-tracker" }
+                ],
+                features: [
+                    "Developed using HTML/CSS, Python, and JavaScript",
+                    "Includes a Pomodoro timer and goal-setting functionalities",
+                    "Real-time activity monitoring using Flask",
+                    "Deployed on Heroku for accessibility",
+                    "Integrates Pushover APIs for notifications"
+                ]
+            },
+            {
+                title: "Jumpknight: Android Studios App Development",
+                description: "JumpKnight is an engaging platform jumper game developed for Android, where players control a knight trying to reach the highest platform.",
+                links: [
+                    { text: "Github", url: "https://github.com/rps9/EC_327_Project" },
+                    { text: "Demo Video", url: "https://www.youtube.com/watch?v=l7J28aPJbHc" }
+                ],
+                features: [
+                    "Led UI/UX and front-end development",
+                    "Implemented tilt-based controls and touch-jump mechanics",
+                    "Conducted extensive debugging and testing",
+                    "Integrated key game components including collision detection and physics calculations"
+                ]
+            },
+            {
+                title: "Smart Blue Light Desk Lamp",
+                description: "This project involved developing a smart desk lamp designed for users with limited dexterity, controllable by voice and limited hand movements.",
+                links: [
+                    { text: "Documentation", url: "https://docs.google.com/document/d/1VIwnP704WDxwkJ0tRHhSRb0U3lKi0Sj6VFabdNUrzAU/edit?usp=drive_link&usp=embed_facebook" },
+                    { text: "Demo Video", url: "https://drive.google.com/file/d/11202GH0v1Twfa7qJm1SeMh-m5PRTtSUe/view?usp=sharing" }
+                ],
+                features: [
+                    "Developed using Arduino Uno and C++",
+                    "Implemented voice control and light sensor adjustments",
+                    "Reduced blue light output by 99%",
+                    "Achieved precise automatic lamp brightness adjustments based on ambient light"
+                ]
+            },
+            {
+                title: "Machine Learning Classification Project Analyzing Global Crime Rates",
+                description: "This project analyzed correlations between crime, drug usage, and unemployment rates using machine learning techniques.",
+                links: [
+                    { text: "Documentation", url: "https://drive.google.com/file/d/1JvBRzfXYV7YW1E6BNxe7EjebDs42-hBM/view?usp=drive_link" }
+                ],
+                features: [
+                    "Analyzed over 200,000 data points from 20 countries",
+                    "Used Matlab Classification Learner for trend identification",
+                    "Implemented data cleaning algorithms, reducing inconsistencies by 30%",
+                    "Created visualizations of year-on-year crime rate changes"
+                ]
+            }
+        ];
+
+        function createProjectHTML(project) {
+            return `
+                <div class="project">
+                    <h3>${project.title}</h3>
+                    <p>${project.description}</p>
+                    <div class="project-links">
+                        ${project.links.map(link => `<a href="${link.url}" target="_blank">${link.text}</a>`).join(' ')}
+                    </div>
+                    <ul>
+                        ${project.features.map(feature => `<li>${feature}</li>`).join('')}
+                    </ul>
+                </div>
+            `;
+        }
+
+        function initializeCarousel() {
+            const carouselContainer = document.querySelector('.project-carousel');
+            projectsData.forEach(project => {
+                carouselContainer.innerHTML += createProjectHTML(project);
+            });
+
+            $('.project-carousel').slick({
+                dots: true,
+                infinite: true,
+                speed: 500,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                adaptiveHeight: true
+            });
+        }
+
         document.addEventListener('DOMContentLoaded', function() {
             revealElements(); // Initial check on page load
             window.addEventListener('scroll', throttle(revealElements, 100));
             window.addEventListener('resize', throttle(revealElements, 100));
+            initializeCarousel(); // Initialize the project carousel
         });
     </script>
-
 </body>
 </html>
