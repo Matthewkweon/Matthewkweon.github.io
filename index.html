@@ -62,6 +62,28 @@
             color: var(--secondary-color);
         }
 
+        .section-header {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+
+        .section-header.reveal {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .section-content {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .section-content.reveal {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
         .project {
             margin-bottom: 40px;
             padding-bottom: 20px;
@@ -265,14 +287,14 @@
 
 
     <script>
-        function revealProjects() {
-            var projects = document.querySelectorAll('.project');
+        function revealElements() {
             var windowHeight = window.innerHeight;
-
-            projects.forEach(function(project) {
-                var projectTop = project.getBoundingClientRect().top;
-                if (projectTop < windowHeight - 50) {
-                    project.classList.add('reveal');
+            var elements = document.querySelectorAll('.section-header, .section-content, .project, .experience');
+            
+            elements.forEach(function(element) {
+                var elementTop = element.getBoundingClientRect().top;
+                if (elementTop < windowHeight - 50) {
+                    element.classList.add('reveal');
                 }
             });
         }
@@ -291,9 +313,9 @@
         }
 
         document.addEventListener('DOMContentLoaded', function() {
-            revealProjects(); // Initial check on page load
-            window.addEventListener('scroll', throttle(revealProjects, 100));
-            window.addEventListener('resize', throttle(revealProjects, 100));
+            revealElements(); // Initial check on page load
+            window.addEventListener('scroll', throttle(revealElements, 100));
+            window.addEventListener('resize', throttle(revealElements, 100));
         });
     </script>
 
