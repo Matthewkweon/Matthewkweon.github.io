@@ -271,14 +271,30 @@
 
             projects.forEach(function(project) {
                 var projectTop = project.getBoundingClientRect().top;
-                if (projectTop < windowHeight - 150) {
+                if (projectTop < windowHeight - 50) {
                     project.classList.add('reveal');
                 }
             });
         }
 
-        window.addEventListener('scroll', revealProjects);
-        window.addEventListener('load', revealProjects);
+        function throttle(func, limit) {
+            let inThrottle;
+            return function() {
+                const args = arguments;
+                const context = this;
+                if (!inThrottle) {
+                    func.apply(context, args);
+                    inThrottle = true;
+                    setTimeout(() => inThrottle = false, limit);
+                }
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            revealProjects(); // Initial check on page load
+            window.addEventListener('scroll', throttle(revealProjects, 100));
+            window.addEventListener('resize', throttle(revealProjects, 100));
+        });
     </script>
 
 </body>
