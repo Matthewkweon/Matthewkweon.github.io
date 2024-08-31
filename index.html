@@ -66,6 +66,14 @@
             margin-bottom: 40px;
             padding-bottom: 20px;
             border-bottom: 1px solid #eee;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .project.reveal {
+            opacity: 1;
+            transform: translateY(0);
         }
 
         .experience {
@@ -254,5 +262,24 @@
     <footer>
         <p>&copy; 2024 Yongjoon Kweon. All rights reserved.</p>
     </footer>
+
+
+    <script>
+        function revealProjects() {
+            var projects = document.querySelectorAll('.project');
+            var windowHeight = window.innerHeight;
+
+            projects.forEach(function(project) {
+                var projectTop = project.getBoundingClientRect().top;
+                if (projectTop < windowHeight - 150) {
+                    project.classList.add('reveal');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', revealProjects);
+        window.addEventListener('load', revealProjects);
+    </script>
+
 </body>
 </html>
